@@ -1,0 +1,16 @@
+{
+  "name": "env-not-found",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bin/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cli"],
+  "author": "marcanta",
+  "license": "ISC",
+  "bin": {
+    "envchecker": "./bin/index.js"
+  }
+}
