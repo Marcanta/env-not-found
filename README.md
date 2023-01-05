@@ -9,7 +9,7 @@ It searches all occurrences of "process.env.[value]" in your current dir ('.js',
 ## Usage
 
 ```
-env-not-found
+# env-not-found
 ```
 
 If there are missing environment variables, the terminal output will be:
