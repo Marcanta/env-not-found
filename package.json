@@ -19,6 +19,6 @@
   "author": "marcanta",
   "license": "ISC",
   "bin": {
-    "envchecker": "./bin/index.js"
+    "env-not-found": "./bin/index.js"
   }
 }
