@@ -8,6 +8,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["cli"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shareef99/task-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shareef99/task-tracker/issues"
+  },
+  "homepage": "https://github.com/shareef99/task-tracker/#readme",
   "author": "marcanta",
   "license": "ISC",
   "bin": {
