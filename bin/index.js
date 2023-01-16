@@ -7,6 +7,8 @@ const fileTypes = ['.js', '.ts', '.jsx', '.tsx']
 
 const blacklisted = ["node_modules", ".yarn", ".pnp.cjs", ".pnp.loader.mjs"]
 
+const envNotFound = {}
+
 // Read .env file and store the key-value pairs in an object
 const env = fs
     .readFileSync('.env', 'utf-8')
@@ -38,10 +40,17 @@ const checkFile = (filePath) => {
 
         // Check if the key is specified in the .env file
         if (!env[envKey]) {
-            console.log(`Warning: "${envKey}" is not specified in the .env file`)
-            process.exit(1)
+            envNotFound[envKey] = true
+            process.exitCode = 1
         }
     })
+}
+
+const printMissingEnv = () => {
+    Object.keys(envNotFound).forEach(env => {
+        console.warn(`Warning: "${env}" is not specified in the .env file`)
+    });
+    console.warn("\n")
 }
 
 // Function to check all files in a directory
@@ -50,7 +59,7 @@ const checkDirectory = (dir) => {
     const files = fs.readdirSync(dir)
 
     // Iterate over the files
-    files.forEach((filename) => {
+    for (const filename of files) {
         if (blacklisted.includes(filename)) {
             return;
         }
@@ -67,7 +76,8 @@ const checkDirectory = (dir) => {
                 checkFile(filePath)
             }
         }
-    })
+    }
 }
 
 checkDirectory(".")
+printMissingEnv()
