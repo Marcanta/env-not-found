@@ -1,6 +1,6 @@
 {
   "name": "env-not-found",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "bin/index.js",
   "type": "module",
@@ -10,12 +10,12 @@
   "keywords": ["cli"],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shareef99/task-tracker.git"
+    "url": "git+https://github.com/Marcanta/env-not-found.git"
   },
   "bugs": {
-    "url": "https://github.com/shareef99/task-tracker/issues"
+    "url": "https://github.com/Marcanta/env-not-found/issues"
   },
-  "homepage": "https://github.com/shareef99/task-tracker/#readme",
+  "homepage": "https://github.com/Marcanta/env-not-found/#readme",
   "author": "marcanta",
   "license": "ISC",
   "bin": {
