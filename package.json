@@ -1,13 +1,15 @@
 {
   "name": "env-not-found",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "bin/index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cli"],
+  "keywords": [
+    "cli"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Marcanta/env-not-found.git"
@@ -20,5 +22,8 @@
   "license": "ISC",
   "bin": {
     "env-not-found": "./bin/index.js"
+  },
+  "dependencies": {
+    "commander": "^10.0.0"
   }
 }
